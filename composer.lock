@@ -1,0 +1,85 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "This file is @generated automatically"
+    ],
+    "hash": "d8c3a8df0297ebd28971d27171370636",
+    "content-hash": "79587b76f9537251b50553755c71262c",
+    "packages": [
+        {
+            "name": "bluerhinos/phpmqtt",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/bluerhinos/phpMQTT.git",
+                "reference": "9a481b9e7c812c585be63cc88870b93ef04118ef"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/bluerhinos/phpMQTT/zipball/9a481b9e7c812c585be63cc88870b93ef04118ef",
+                "reference": "9a481b9e7c812c585be63cc88870b93ef04118ef",
+                "shasum": ""
+            },
+            "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD"
+            ],
+            "authors": [
+                {
+                    "name": "Andrew Milsted",
+                    "email": "andrew@bluerhinos.co.uk"
+                }
+            ],
+            "description": "Simple MQTT Class",
+            "time": "2015-06-25 13:16:59"
+        },
+        {
+            "name": "tobre6/neato-botvac",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/tobre6/botvac.git",
+                "reference": "8d4419172f3d5e3a5574af055729dc2bedd5bb5a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/tobre6/botvac/zipball/8d4419172f3d5e3a5574af055729dc2bedd5bb5a",
+                "reference": "8d4419172f3d5e3a5574af055729dc2bedd5bb5a",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "src/NeatoBotvacApi.php",
+                    "src/NeatoBotvacClient.php",
+                    "src/NeatoBotvacRobot.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "proprietary"
+            ],
+            "authors": [
+                {
+                    "name": "Tõnis Tobre",
+                    "email": "tobre@bitweb.ee"
+                }
+            ],
+            "description": "PHP API for Neato Botvac robot vacuum cleaner",
+            "time": "2016-08-07 12:55:43"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": {
+        "tobre6/neato-botvac": 20,
+        "bluerhinos/phpmqtt": 20
+    },
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": []
+}

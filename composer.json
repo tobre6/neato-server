@@ -1,0 +1,16 @@
+{
+  "name": "tobre6/neato-mqtt-server",
+  "description": "MQTT server for Neato Botvac Connected",
+  "minimum-stability": "stable",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "Tõnis Tobre",
+      "email": "tobre@bitweb.ee"
+    }
+  ],
+  "require": {
+    "tobre6/neato-botvac": "dev-master",
+    "bluerhinos/phpmqtt" : "dev-master"
+  }
+}
