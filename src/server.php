@@ -9,7 +9,7 @@
 require __DIR__ . '/../vendor/autoload.php';
 require __DIR__ . "/../vendor/bluerhinos/phpmqtt/phpMQTT.php";
 
-$config = include 'config.sample.php';
+$config = include 'config.php';
 
 $token = false; // Token returned from authorize method
 
@@ -36,7 +36,7 @@ if(!$mqtt->connect()){
     exit(1);
 }
 
-$topics[$config['neato']['commandTopic']] = array("qos"=>0, "function"=>"processMessage");
+$topics[$config['mqtt']['commandTopic']] = array("qos"=>0, "function"=>"processMessage");
 $mqtt->subscribe($topics,0);
 
 $time = time();
@@ -74,5 +74,5 @@ function processMessage($topic, $msg) {
 function publishStatus($status) {
     global $mqtt;
     global $config;
-    $mqtt->publish($config['neato']['stateTopic'], $status == 1 ? 'stop' : 'clean', 0);
+    $mqtt->publish($config['mqtt']['stateTopic'], $status == 1 ? 'stop' : 'clean', 0);
 }
