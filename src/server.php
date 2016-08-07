@@ -9,7 +9,7 @@
 require __DIR__ . '/../vendor/autoload.php';
 require __DIR__ . "/../vendor/bluerhinos/phpmqtt/phpMQTT.php";
 
-$config = include 'config.php';
+$config = include 'config/config.php';
 
 $token = false; // Token returned from authorize method
 
