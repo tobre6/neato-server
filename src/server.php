@@ -58,13 +58,16 @@ $mqtt->close();
 
 function processMessage($topic, $msg) {
     global $robots;
+    global $interval;
     if ($msg == 'clean') {
         publishStatus(2);
+        $interval = 20;
         $robots[0]->startCleaning();
     }
 
     if ($msg == 'stop') {
         publishStatus(1);
+        $interval = 600;
         $robots[0]->pauseCleaning();
         $robots[0]->sendToBase();
         $robots[0]->resumeCleaning();
