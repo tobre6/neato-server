@@ -2,9 +2,6 @@ FROM resin/rpi-raspbian
 
 MAINTAINER tobre6
 
-COPY . /usr/src/app
-WORKDIR /usr/src/app
-
 RUN apt-get update
 RUN apt-get install -y php5-cli
 
@@ -14,5 +11,8 @@ RUN php composer-setup.php
 RUN php -r "unlink('composer-setup.php');"
 
 RUN composer.phar update
+
+COPY . /usr/src/app
+WORKDIR /usr/src/app
 
 CMD [ "php", "./src/server.php" ]
