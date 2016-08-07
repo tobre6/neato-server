@@ -1,4 +1,4 @@
-FROM resin/rpi-raspian
+FROM resin/rpi-raspbian
 
 MAINTAINER tobre6
 
