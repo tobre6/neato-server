@@ -1,4 +1,5 @@
 FROM resin/rpi-raspbian
+#FROM debian:jessie
 
 MAINTAINER tobre6
 
@@ -10,7 +11,7 @@ RUN php -r "if (hash_file('SHA384', 'composer-setup.php') === 'e115a8dc7871f15d8
 RUN php composer-setup.php
 RUN php -r "unlink('composer-setup.php');"
 
-RUN composer.phar update
+RUN php composer.phar update
 
 COPY . /usr/src/app
 WORKDIR /usr/src/app
